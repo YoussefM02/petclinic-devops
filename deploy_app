@@ -1,0 +1,8 @@
+#!/bin/bash
+./mvnw clean install
+BUILD_DIR=$(mvn -q -DforceStdout help:evaluate -Dexpression=project.build.directory)
+FINAL_NAME=$(mvn -q -DforceStdout help:evaluate -Dexpression=project.build.finalName)
+JAR_NAME="${BUILD_DIR}/${FINAL_NAME}.jar"
+
+echo "Path of jar is: ${JAR_NAME}"
+java -jar ${JAR_NAME}
