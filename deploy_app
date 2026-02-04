@@ -5,4 +5,3 @@ FINAL_NAME=$(./mvnw -q -DforceStdout help:evaluate -Dexpression=project.build.fi
 JAR_NAME="${BUILD_DIR}/${FINAL_NAME}.jar"
 
 echo "Path of jar is: ${JAR_NAME}"
-java -jar ${JAR_NAME}
