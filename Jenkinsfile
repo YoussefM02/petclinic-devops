@@ -3,17 +3,17 @@ pipeline{
         label 'jenkins-inbound-agent'
     }
     stages{
-        stage{'build'} {
+        stage('build') {
             steps{
                 echo "Testing build"
             }
         }
-        stage{'test'} {
+        stage('test') {
             steps{
                 echo "Testing test"
             }
         }
-        stage{'ship'} {
+        stage('ship') {
             steps{
                 echo "Testing test"
             }
